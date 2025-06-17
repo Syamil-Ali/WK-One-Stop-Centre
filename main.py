@@ -188,8 +188,8 @@ async def main_app():
         # Do Excel processing outside the handler
         #await run.cpu_bound(process_excel_file,content)
         #excel_sheets_dict = await run.cpu_bound(process_excel_file, content)
-        raw_bytes = await content.read()
-        app.storage.tab['excel_sheets_dict'] = await run.cpu_bound(process_excel_file, raw_bytes)
+        #raw_bytes = await content.read()
+        app.storage.tab['excel_sheets_dict'] = await run.cpu_bound(process_excel_file, content)
 
         #uploaded_file = excel_sheets_dict.get("Work Task")
         app.storage.tab['uploaded_file'] = app.storage.tab['excel_sheets_dict'].get("Work Task")
