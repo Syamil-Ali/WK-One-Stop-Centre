@@ -62,7 +62,7 @@ async def main_app():
         #ui.notify(f'Reading {file_name}...')  # Confirm read works
 
         # Do Excel processing outside the handler
-        app.storage.tab['excel_sheets_dict'] = await run.cpu_bound(func.read_excel_sheets, content)
+        app.storage.tab['excel_sheets_dict'] = await run.io_bound(func.read_excel_sheets, content)
 
         #uploaded_file = excel_sheets_dict.get("Work Task")
         app.storage.tab['uploaded_file'] = app.storage.tab['excel_sheets_dict'].get("Work Task")
