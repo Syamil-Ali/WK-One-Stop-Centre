@@ -154,5 +154,5 @@ ui.run(
     host='0.0.0.0',
     port=int(os.getenv('PORT', 8080)),  # use Railway's port, fallback to 8080 locally
     title='MQL Automation',
-    reload=True
+    reload=False
 )
