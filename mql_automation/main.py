@@ -9,6 +9,8 @@ import mql_automation.layout.header as header
 
 # function
 from mql_automation import function as func
+from starlette.formparsers import MultiPartParser
+MultiPartParser.spool_max_size = 1024 * 1024 * 512  # 512 MB
 
 
 
