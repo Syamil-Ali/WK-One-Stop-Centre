@@ -10,6 +10,9 @@ import opportunity_generator.layout.header as header
 # function
 import opportunity_generator.function as func
 
+from starlette.formparsers import MultiPartParser
+MultiPartParser.spool_max_size = 1024 * 1024 * 512  # 512 MB
+
 @ui.page('/opportunity_generator')
 async def main_app():
 
