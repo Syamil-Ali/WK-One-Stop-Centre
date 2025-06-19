@@ -2,3 +2,4 @@ pandas
 polars
 nicegui
 fastexcel
+requests
