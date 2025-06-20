@@ -231,13 +231,3 @@ async def main_app():
 
             # Spinner and Work Containers
             spinner_container = ui.column()
-
-
-# To run
-ui.run(
-    host='0.0.0.0',
-    port=int(os.getenv('PORT', 8080)),  # use Railway's port, fallback to 8080 locally
-    title='WK One Stop Centre',
-    reload=True,
-    reconnect_timeout=300
-)
