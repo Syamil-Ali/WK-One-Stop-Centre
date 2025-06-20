@@ -4,3 +4,4 @@ nicegui
 fastexcel
 requests
 openpyxl
+pdfplumber
