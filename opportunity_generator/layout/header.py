@@ -22,3 +22,9 @@ def header():
 
                 ui.button('Opportunity Generator', on_click=''
                 ).props('outline rounded').classes('text-black font-poppins font-medium normal-case button-bottom-border')
+
+                ui.button('PDF to Table', on_click=lambda: ui.navigate.to('/pdf_to_table')
+                ).props('flat rounded').classes('text-white font-poppins font-medium normal-case')
+
+                ui.button('Ultimate Parent Generator', on_click=lambda: ui.navigate.to('/ultimate_parent_generator')
+                ).props('flat rounded').classes('text-white font-poppins font-medium normal-case')
