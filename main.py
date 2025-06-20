@@ -45,7 +45,7 @@ async def main_app():
     # Render Process MQL
 
     #### UI BODY ###
-    with ui.element('div').style('height: 80vh;').classes('flex pt-[20vh] justify-center max-w-[800px] w-full mx-auto'):
+    with ui.element('div').style('height: 80vh;').classes('flex pt-[20vh] pb-[2rem] justify-center max-w-[800px] w-full mx-auto'):
         with ui.column().classes('items-center w-full gap-4'):
 
             # Title
