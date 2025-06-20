@@ -3,3 +3,4 @@ polars
 nicegui
 fastexcel
 requests
+openpyxl
