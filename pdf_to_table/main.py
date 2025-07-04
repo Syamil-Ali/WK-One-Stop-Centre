@@ -3,8 +3,10 @@ import os
 from datetime import date
 
 # layout
-import pdf_to_table.layout.custom_html as ch
-import pdf_to_table.layout.header as header
+#import pdf_to_table.layout.custom_html as ch
+#import pdf_to_table.layout.header as header
+import layout.header as header
+import layout.custom_html as ch
 
 # function
 import pdf_to_table.function as func
@@ -35,7 +37,8 @@ async def main_app():
     ch.custom_html()
 
     # Header
-    header.header()
+    current_path = ui.context.client.request.url.path
+    header.header(current_path)
 
 
     # UPLOAD AND READ PDF
