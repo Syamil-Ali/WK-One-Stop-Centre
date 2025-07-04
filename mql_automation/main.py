@@ -4,8 +4,10 @@ import re
 from datetime import date
 
 # layout
-import mql_automation.layout.custom_html as ch
-import mql_automation.layout.header as header
+#import mql_automation.layout.custom_html as ch
+#import mql_automation.layout.header as header
+import layout.header as header
+import layout.custom_html as ch
 
 # function
 from mql_automation import function as func
@@ -47,7 +49,8 @@ async def main_app():
     ch.custom_html()
 
     # Header
-    header.header()
+    current_path = ui.context.client.request.url.path
+    header.header(current_path)
 
 
     # UPLOAD AND READ EXCEL
