@@ -4,8 +4,10 @@ import re
 from datetime import date
 
 # layout
-import opportunity_generator.layout.custom_html as ch
-import opportunity_generator.layout.header as header
+#import opportunity_generator.layout.custom_html as ch
+#import opportunity_generator.layout.header as header
+import layout.header as header
+import layout.custom_html as ch
 
 # function
 import opportunity_generator.function as func
@@ -42,7 +44,8 @@ async def main_app():
     ch.custom_html()
 
     # Header
-    header.header()
+    current_path = ui.context.client.request.url.path
+    header.header(current_path)
 
 
     # UPLOAD AND READ EXCEL
