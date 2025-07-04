@@ -42,7 +42,9 @@ async def main_app():
     ch.custom_html()
 
     # Header
-    header.header()
+    # get the current path
+    current_path = ui.context.client.request.url.path
+    header.header(current_path)
             
 
     # Render Process MQL
