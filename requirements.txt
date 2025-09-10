@@ -1,7 +1,8 @@
 pandas
 polars
-nicegui
+nicegui==2.21.0
 fastexcel
 requests
 openpyxl
 pdfplumber
+pyarrow
