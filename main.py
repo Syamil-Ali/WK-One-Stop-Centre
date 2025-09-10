@@ -113,6 +113,7 @@ ui.run(
     port=int(os.getenv('PORT', 8080)),  # use Railway's port, fallback to 8080 locally
     title='WK One Stop Centre',
     favicon=smiley, #"🚀"
-    reload=True,
+    reload=False,
     reconnect_timeout=300
 )
+
