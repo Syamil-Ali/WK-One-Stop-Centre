@@ -1,5 +1,4 @@
 from nicegui import ui
-from starlette.formparsers import MultiPartParser
 import os
 import json
 
@@ -116,4 +115,5 @@ ui.run(
     reload=False,
     reconnect_timeout=300
 )
+
 
