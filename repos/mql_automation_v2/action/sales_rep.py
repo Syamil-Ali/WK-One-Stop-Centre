@@ -69,7 +69,7 @@ def get_location_zipcode(zipcode, wk_territory, total_item, product):
 
         if product.strip().upper() == 'UPTODATE':
 
-            if total_item <= utd_growth:
+            if (total_item > 0) and (total_item <= utd_growth):
 
                 territory = acc_info['2025 GROWTH'].iloc[0] # for UTD
                 region = territory[:-2]
@@ -83,7 +83,7 @@ def get_location_zipcode(zipcode, wk_territory, total_item, product):
         # lexicomp, medi-span 
         elif (product.strip().upper() == 'LEXICOMP') or (product.strip().upper() == 'MEDI-SPAN'):
 
-            if total_item <= lexi_growth:
+            if (total_item > 0) and (total_item <= lexi_growth):
 
                 territory = acc_info['2025 GROWTH'].iloc[0] # for UTD
                 region = territory[:-2]
@@ -183,5 +183,6 @@ def main_sales_rep(row, account_object, wk_territory, wk_new_assignment):
     
     # get the sales rep
     sales_rep, acc_owner = get_sales_rep(row['PRODUCT'], wk_new_assignment, territory)
+
 
     return territory, region, sales_rep, acc_owner
