@@ -74,7 +74,7 @@ def get_location_zipcode(zipcode, wk_territory, total_item, product):
                 territory = acc_info['2025 GROWTH'].iloc[0] # for UTD
                 region = territory[:-2]
 
-            elif total_item <= utd_key:
+            elif (total_item > utd_growth) and (total_item <= utd_key):
 
                 territory = acc_info['2025 KEY'].iloc[0] # for UTD
                 region = territory[:-2]
@@ -88,7 +88,7 @@ def get_location_zipcode(zipcode, wk_territory, total_item, product):
                 territory = acc_info['2025 GROWTH'].iloc[0] # for UTD
                 region = territory[:-2]
 
-            elif total_item <= lexi_key:
+            elif (total_item > lexi_growth) and (total_item <= lexi_key):
 
                 territory = acc_info['2025 KEY'].iloc[0] # for UTD
                 region = territory[:-2]
@@ -186,3 +186,4 @@ def main_sales_rep(row, account_object, wk_territory, wk_new_assignment):
 
 
     return territory, region, sales_rep, acc_owner
+
