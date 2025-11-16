@@ -25,6 +25,7 @@ def read_excel_sheets(content, sheet_names = sheet_names):
                 with io.BytesIO(content) as f:
                         df = pl.read_excel(f, sheet_name=sheet).to_pandas()
                         if not df.empty:
+                            df = df.dropna(how="all")
                             result_dict[sheet] = df
                             print(f'✅ Loaded sheet: {sheet}, {len(df)} rows')
                         else:
@@ -197,4 +198,5 @@ async def excel_download_handler(input_url):
     except:
         app.storage.tab['main_body'].visible = True # if file has been successfully upload - the upload button set to hidden
         unrender_spinner()
+
         ui.notify('Error!')
