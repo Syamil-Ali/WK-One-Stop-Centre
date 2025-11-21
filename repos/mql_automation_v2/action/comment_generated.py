@@ -62,10 +62,19 @@ def populate_comment_general(row): # data here is row
 
 
     # assigned person
-    if row['Assigned Person'] == 'Syamil Ali':
+    raw_name = str(row['Assigned Person']).strip()
+    name = raw_name.lower()
+    
+    if name == 'syamil ali':
         assigned_person = 'Syamil'
-    elif row['Assigned Person'] == 'Syifa Khairi':
+    elif name == 'syifa khairi':
         assigned_person = 'SK'
+    elif 'carlota' in name or 'canopin' in name:
+        assigned_person = 'Carlota'
+    else:
+        # Use first name if present
+        assigned_person = raw_name.split()[0] if raw_name else ""
+    
 
     #print(row['Assigned Person'])
     #print(assigned_person)
@@ -85,4 +94,5 @@ def populate_comment_general(row): # data here is row
     # Join non-empty lines to avoid blank lines
     comment = "\n".join(line for line in comment_lines if line.strip())
     
+
     return comment
