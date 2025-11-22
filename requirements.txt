@@ -1,0 +1,8 @@
+pandas
+polars
+nicegui==2.21.0
+fastexcel
+requests
+openpyxl
+pdfplumber
+pyarrow

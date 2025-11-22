@@ -1,0 +1,34 @@
+{
+  "Repos": [
+    {
+      "Number": 1,
+      "Title": "MQL Automation - V2",
+      "Description": "Automates the process of compiling and generating lead notes.",
+      "URL": "/mql_automation_v2"
+    },
+    {
+      "Number": 2,
+      "Title": "MQL Automation",
+      "Description": "Automates the process of compiling and generating lead notes.",
+      "URL": "/mql_automation"
+    },
+    {
+      "Number": 3,
+      "Title": "Opportunity Generator",
+      "Description": "Generate Opportunity Info from Salesforce using CE-Number.",
+      "URL": "/opportunity_generator"
+    },
+    {
+      "Number": 4,
+      "Title": "PDF To Table",
+      "Description": "Convert PDF Data to Table Format.",
+      "URL": "/pdf_to_table"
+    },
+    {
+      "Number": 5,
+      "Title": "Ultimate Parent Generator",
+      "Description": "Generate Ultimate Parent Info from Salesforce using CE-Number.",
+      "URL": "/ultimate_parent_generator"
+    }
+  ]
+}
